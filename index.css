@@ -222,6 +222,11 @@ button:hover::before {
     opacity: 1;
 }
 
+.attribution {
+    position: absolute;
+    bottom: 5px;
+}
+
 @media screen and (min-width: 450px) {
     body {
         height: 100vh;
@@ -266,5 +271,9 @@ button:hover::before {
     button {
         margin: 40px 5px;
         height: 50px;
+    }
+
+    .attribution {
+        display: none;
     }
 }
