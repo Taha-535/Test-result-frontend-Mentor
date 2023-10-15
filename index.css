@@ -1,0 +1,270 @@
+@font-face {
+    font-family: Hanken Grotesk;
+    src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+* {
+    font-family: Hanken Grotesk, sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 70vh;
+    margin: 0;
+    box-shadow: rgb(0 0 0 / 25%) 10px 14px 30px 0px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.overall, .parts {
+    padding: 5% 10%;
+}
+
+.overall {
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    display: flex;
+    gap: 3vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    height: 100% !important;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+.urresult {
+    color: hsl(241, 100%, 89%);
+    font-size: 1.2rem;
+}
+
+.result {
+    width: 20vh !important;
+    height: 20vh !important;
+    border-radius: 50%;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.result h1 {
+    color: white;
+    font-size: 3.3rem;
+}
+
+.result h2 {
+    font-size: 1rem;
+    color: hsl(229, 23%, 59%);
+}
+
+.great {
+    color: white;
+}
+
+.overall h3 {
+    font-weight: 500;
+    font-size: .8rem;
+    color: hsla(222, 100%, 96%, 0.623);
+}
+
+.parts {
+    background-color: white;
+    width: 50%;
+    height: 100% !important;
+    padding:  0 5%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.sum-ttl {
+    color: hsl(224, 30%, 27%);
+    font-weight: 800;
+    margin-top: 10%;
+}
+
+.sum {
+    margin: 10% 0 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 1.8vh;
+}
+
+.parts div:not(.sum, .ic-ti, .score) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    padding: 4.5% 10px;
+    border-radius: 10px;
+}
+
+.ic-ti {
+    margin-left: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    text-transform: capitalize;
+    gap: .5vw;
+    font-weight: 500;
+}
+
+.reaction {
+    background-color: hsla(0, 100%, 67%, 0.123);
+}
+
+.reaction .sum-txt {
+    color: hsl(0, 100%, 67%);
+}
+
+.memory {
+    background-color: hsla(39, 100%, 56%, 0.123);
+}
+
+.memory .sum-txt {
+    color: hsl(39, 100%, 56%);
+}
+
+.verbal {
+    background-color: hsl(166, 100%, 37%, 0.123);
+}
+
+.verbal .sum-txt {
+    color: hsl(166, 100%, 37%);
+}
+
+.visual {
+    background-color: hsl(234, 85%, 45%, 0.123);
+}
+
+.visual .sum-txt {
+    color: hsl(234, 85%, 45%);
+}
+
+.score {
+    margin-right: 10px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sum-numb {
+    color: hsl(224, 30%, 27%);
+    font-weight: 700;
+    margin-right: 15%;
+}
+
+.sum-total {
+    text-wrap: nowrap;
+    color: hsla(224, 30%, 27%, 0.3);
+    font-weight: 700;
+}
+
+button {
+    color: hsl(221, 100%, 96%);
+    font-size: 1.1rem;
+    font-weight: 600;
+    height: 10%;
+    background-color: hsl(224, 30%, 27%);
+    border-radius: 25px;
+    border: none;
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+button::before {
+    content: "";
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    opacity: 0;
+    transition: .5s ease;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 25px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:hover::before {
+    opacity: 1;
+}
+
+@media screen and (min-width: 450px) {
+    body {
+        height: 100vh;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .container {
+        height: fit-content;
+        width: 100%;
+        flex-direction: column;
+        border-radius: 0;
+        overflow: visible;
+    }
+
+    .overall, .parts {
+        width: 100%;
+    }
+
+    .overall {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        padding-bottom: 25px;
+    }
+
+    .result h1 {
+        font-size: 2.9rem;
+    }
+
+    .result h2 {
+        font-size: .8rem;
+    }
+
+    .ic-ti {
+        gap: 3.5vw;
+    }
+
+    button {
+        margin: 40px 5px;
+        height: 50px;
+    }
+}
