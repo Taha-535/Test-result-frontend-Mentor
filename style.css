@@ -77,7 +77,7 @@ body {
 
 .container {
     --item-padding: 1.8rem;
-    --item-border-radius: 40px;
+    --item-border-radius: 25px;
 
     display: flex;
     flex-direction: column;
